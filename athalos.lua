@@ -11195,24 +11195,11 @@ local Text = [[
 Dev_SOFI(msg.chat_id_, msg.id_, 1, (Help or Text), 1, 'md')
 end
 --     Source athalos     --
-if text == 'تفعيل اليوتيوب' and Manager(msg) then  
-local athalosTeam = '✧ : اهلا عزيزي ↫ '..SOFIRank(msg)..' \n✧ : تم تفعيل اليوتيوب بنجاح'
-SOFImoned(msg.chat_id_, msg.sender_user_id_, msg.id_, athalosTeam, 14, string.len(msg.sender_user_id_))
-DevSOFI:del(athalos.."SOFI:WhyTube"..msg.chat_id_) 
-return false  
-end
-if text == 'تعطيل اليوتيوب' and Manager(msg) then  
-local athalosTeam = '✧ : اهلا عزيزي ↫ '..SOFIRank(msg)..' \n✧ : تم تعطيل اليوتيوب بنجاح'
-SOFImoned(msg.chat_id_, msg.sender_user_id_, msg.id_, athalosTeam, 14, string.len(msg.sender_user_id_))
-DevSOFI:set(athalos.."SOFI:WhyTube"..msg.chat_id_,true) 
-return false  
-end 
---     Source athalos     --
 if SecondSudo(msg) then
 if text == "تحديث السورس" and ChCheck(msg) or text == "تحديث سورس" and ChCheck(msg) or text == "↫ تحديث السورس ✧" and ChCheck(msg) then 
 Dev_SOFI(msg.chat_id_, msg.id_, 1, '✧ : جاري تحديث سورس اثالوس', 1, 'md') 
 os.execute('rm -rf athalos.lua') 
-os.execute('wget https://raw.githubusercontent.com/SRC-LoRdShiP/athalos/main/athalos.lua') 
+os.execute('wget https://raw.githubusercontent.com/Src-Athalos/athalos/main/athalos.lua') 
 dofile('athalos.lua') 
 io.popen("rm -rf ../.telegram-cli/*")
 print("\27[31;47m\n          ( تم تحديث السورس )          \n\27[0;34;49m\n") 
