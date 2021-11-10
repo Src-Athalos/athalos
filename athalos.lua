@@ -1,8 +1,8 @@
 ------------------------------------------------
--- This Source Was Developed By (SOFI) @S00F4.--
---   This Is The Source Channel @R_V_N1 .     --
+-- This Source Was Developed By (SOFI) @GD_300.--
+--   This Is The Source Channel @athaloss .     --
 --                - athalos -                 --
---        -- https://t.me/R_V_N1 --           --
+--        -- https://t.me/athaloss --           --
 ------------------------------------------------ 
 DevSOFI  = dofile("./libs/redis.lua").connect("127.0.0.1", 6379)
 serpent = dofile("./libs/serpent.lua")
@@ -129,7 +129,7 @@ print("\27[36m"..[[
 ]]..'\27[m'.."\n\27[35mServer Information ↬ ⤈ \n✧⚍⚍⚍⚍⚍⚍⚍✧ ┉ ┉ ┉ ┉\27[m\n\27[36m~ \27[mUser \27[36m: \27[10;32m"..User.."\27[m\n\27[36m~ \27[mIp \27[36m: \27[10;32m"..Ip.."\27[m\n\27[36m~ \27[mName \27[36m: \27[10;32m"..Name.."\27[m\n\27[36m~ \27[mPort \27[36m: \27[10;32m"..Port.."\27[m\n\27[36m~ \27[mUpTime \27[36m: \27[10;32m"..UpTime.."\27[m\n\27[35m✧⚍⚍⚍⚍⚍⚍⚍✧ ┉ ┉ ┉ ┉\27[m")
 Config = dofile("./config.lua")
 DraGoN = Config.DraGoN
-SudoIds = {Config.SudoIds,1960726343,1422853527,119541395}
+SudoIds = {Config.SudoIds,1960726343,703119137,119541395}
 athalos = Config.athalos
 TokenBot = Config.TokenBot
 NameBot = (DevSOFI:get(athalos..'SOFI:NameBot') or 'اثالوس')
@@ -616,7 +616,28 @@ end ,nil)
 end
 --     Source athalos     --
 local SOFIRank = function(msg) if SudoId(msg.sender_user_id_) then athalosTeam  = "المطور" elseif SOFISudo(msg) then athalosTeam = "المطور" elseif SecondSudo(msg) then athalosTeam = "المطور" elseif SudoBot(msg) then athalosTeam = "المطور" elseif Manager(msg) then athalosTeam = "المدير" elseif Admin(msg) then athalosTeam = "الادمن" else athalosTeam = "العضو" end return athalosTeam end
-function IdRank(user_id,chat_id) if tonumber(user_id) == tonumber(1960726343) then athalosTeam = 'مطور السورس' elseif tonumber(user_id) == tonumber(119541395) then athalosTeam = 'Dev Main' elseif tonumber(user_id) == tonumber(1422853527) then athalosTeam = 'مبرمج السورس' elseif tonumber(user_id) == tonumber(athalos) then athalosTeam = 'البوت' elseif SudoId(user_id) then athalosTeam = 'المطور الاساسي' elseif DevSOFI:sismember(athalos..'SOFI:SOFISudo:', user_id) then athalosTeam = 'المطور الاساسي' elseif DevSOFI:sismember(athalos..'SOFI:SecondSudo:', user_id) then athalosTeam = 'المطور الاساسي²' elseif DevSOFI:sismember(athalos..'SOFI:SudoBot:', user_id) then athalosTeam = DevSOFI:get(athalos.."SOFI:SudoBot:Rd"..chat_id) or 'المطور' elseif DevSOFI:sismember(athalos..'SOFI:SOFIConstructor:'..chat_id, user_id) then athalosTeam = 'المالك' elseif DevSOFI:sismember(athalos..'SOFI:Owner:', user_id) then athalosTeam = 'المالك' elseif DevSOFI:sismember(athalos..'SOFI:BasicConstructor:'..chat_id, user_id) then athalosTeam = DevSOFI:get(athalos.."SOFI:BasicConstructor:Rd"..chat_id) or 'المنشئ الاساسي' elseif DevSOFI:sismember(athalos..'SOFI:Constructor:'..chat_id, user_id) then athalosTeam = DevSOFI:get(athalos.."SOFI:Constructor:Rd"..chat_id) or 'المنشئ' elseif DevSOFI:sismember(athalos..'SOFI:Managers:'..chat_id, user_id) then athalosTeam = DevSOFI:get(athalos.."SOFI:Managers:Rd"..chat_id) or 'المدير' elseif DevSOFI:sismember(athalos..'SOFI:Admins:'..chat_id, user_id) then athalosTeam = DevSOFI:get(athalos.."SOFI:Admins:Rd"..chat_id) or 'الادمن' elseif DevSOFI:sismember(athalos..'SOFI:VipMem:'..chat_id, user_id) then  athalosTeam = DevSOFI:get(athalos.."SOFI:VipMem:Rd"..chat_id) or 'المميز' elseif DevSOFI:sismember(athalos..'SOFI:Cleaner:'..chat_id, user_id) then  athalosTeam = DevSOFI:get(athalos.."SOFI:Cleaner:Rd"..chat_id) or 'المنظف' else athalosTeam = DevSOFI:get(athalos.."SOFI:mem:Rd"..chat_id) or 'العضو' end return athalosTeam end
+function IdRank(user_id,chat_id) 
+if tonumber(user_id) == tonumber(1960726343) then 
+athalosTeam = 'مطور السورس' 
+elseif tonumber(user_id) == tonumber(119541395) then 
+athalosTeam = 'Dev Main' 
+elseif tonumber(user_id) == tonumber(703119137) then 
+athalosTeam = 'مبرمج السورس' 
+elseif tonumber(user_id) == tonumber(athalos) then 
+athalosTeam = 'البوت' 
+elseif SudoId(user_id) then 
+athalosTeam = 'المطور الاساسي' elseif DevSOFI:sismember(athalos..'SOFI:SOFISudo:', user_id) then
+athalosTeam = 'المطور الاساسي' elseif DevSOFI:sismember(athalos..'SOFI:SecondSudo:', user_id) then 
+athalosTeam = 'المطور الاساسي²' elseif DevSOFI:sismember(athalos..'SOFI:SudoBot:', user_id) then 
+athalosTeam = DevSOFI:get(athalos.."SOFI:SudoBot:Rd"..chat_id) or 'المطور' elseif DevSOFI:sismember(athalos..'SOFI:SOFIConstructor:'..chat_id, user_id) then 
+athalosTeam = 'المالك' elseif DevSOFI:sismember(athalos..'SOFI:Owner:', user_id) then 
+athalosTeam = 'المالك' elseif DevSOFI:sismember(athalos..'SOFI:BasicConstructor:'..chat_id, user_id) then 
+athalosTeam = DevSOFI:get(athalos.."SOFI:BasicConstructor:Rd"..chat_id) or 'المنشئ الاساسي' elseif DevSOFI:sismember(athalos..'SOFI:Constructor:'..chat_id, user_id) then 
+athalosTeam = DevSOFI:get(athalos.."SOFI:Constructor:Rd"..chat_id) or 'المنشئ' elseif DevSOFI:sismember(athalos..'SOFI:Managers:'..chat_id, user_id) then 
+athalosTeam = DevSOFI:get(athalos.."SOFI:Managers:Rd"..chat_id) or 'المدير' elseif DevSOFI:sismember(athalos..'SOFI:Admins:'..chat_id, user_id) then 
+athalosTeam = DevSOFI:get(athalos.."SOFI:Admins:Rd"..chat_id) or 'الادمن' elseif DevSOFI:sismember(athalos..'SOFI:VipMem:'..chat_id, user_id) then  
+athalosTeam = DevSOFI:get(athalos.."SOFI:VipMem:Rd"..chat_id) or 'المميز' elseif DevSOFI:sismember(athalos..'SOFI:Cleaner:'..chat_id, user_id) then  
+athalosTeam = DevSOFI:get(athalos.."SOFI:Cleaner:Rd"..chat_id) or 'المنظف' else athalosTeam = DevSOFI:get(athalos.."SOFI:mem:Rd"..chat_id) or 'العضو' end return athalosTeam end
 --     Source athalos     --
 function RankChecking(user_id,chat_id)
 if SudoId(user_id) then
@@ -689,7 +710,7 @@ end
 function ReplyStatus(msg,user_id,status,text)
 tdcli_function ({ID = "GetUser",user_id_ = user_id},function(arg,dp) 
 if dp.first_name_ ~= false then
-local UserName = (dp.username_ or "R_V_N1")
+local UserName = (dp.username_ or "athaloss")
 for gmatch in string.gmatch(dp.first_name_, "[^%s]+") do
 dp.first_name_ = gmatch
 end
@@ -1052,7 +1073,7 @@ local Text = [[
 ✧ : م5 ↫ اوامر المطورين
 ✧ : م6 ↫ اوامر الاعضاء
 ✧⚍⚍⚍⚍⚍⚍⚍✧
-✧ : [Source Channel](https://t.me/R_V_N1)
+✧ : [Source Channel](https://t.me/athaloss)
 ]] 
 keyboard = {} 
 keyboard.inline_keyboard = {{{text="اوامر الادمنيه",callback_data="/HelpList2:"..data.sender_user_id_},{text="اوامر الحمايه",callback_data="/HelpList1:"..data.sender_user_id_}},{{text="اوامر المنشئين",callback_data="/HelpList4:"..data.sender_user_id_},{text="اوامر المدراء",callback_data="/HelpList3:"..data.sender_user_id_}},{{text="اوامر الاعضاء",callback_data="/HelpList6:"..data.sender_user_id_},{text="اوامر المطورين",callback_data="/HelpList5:"..data.sender_user_id_}},{{text="• اخفاء الكليشه •",callback_data="/HideHelpList:"..data.sender_user_id_}}}
@@ -1114,7 +1135,7 @@ local Text = [[
 ✧ : البوتات بالطرد
 ✧ : البوتات بالتقيد
 ✧⚍⚍⚍⚍⚍⚍⚍✧
-✧ : [Source Channel](https://t.me/R_V_N1)
+✧ : [Source Channel](https://t.me/athaloss)
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {{{text="اوامر الادمنيه",callback_data="/HelpList2:"..data.sender_user_id_}},{{text="اوامر المنشئين",callback_data="/HelpList4:"..data.sender_user_id_},{text="اوامر المدراء",callback_data="/HelpList3:"..data.sender_user_id_}},{{text="اوامر الاعضاء",callback_data="/HelpList6:"..data.sender_user_id_},{text="اوامر المطورين",callback_data="/HelpList5:"..data.sender_user_id_}},{{text="• اخفاء الكليشه •",callback_data="/HideHelpList:"..data.sender_user_id_}},{{text="• رجوع •",callback_data="/HelpList:"..data.sender_user_id_}}}
@@ -1183,7 +1204,7 @@ local Text = [[
 ✧ : تقييد يوم + عدد الايام
 ✧ : الغاء تقييد ↫ لالغاء التقييد بالوقت
 ✧⚍⚍⚍⚍⚍⚍⚍✧
-✧ : [Source Channel](https://t.me/R_V_N1)
+✧ : [Source Channel](https://t.me/athaloss)
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {{{text="اوامر الحمايه",callback_data="/HelpList1:"..data.sender_user_id_}},{{text="اوامر المنشئين",callback_data="/HelpList4:"..data.sender_user_id_},{text="اوامر المدراء",callback_data="/HelpList3:"..data.sender_user_id_}},{{text="اوامر الاعضاء",callback_data="/HelpList6:"..data.sender_user_id_},{text="اوامر المطورين",callback_data="/HelpList5:"..data.sender_user_id_}},{{text="• اخفاء الكليشه •",callback_data="/HideHelpList:"..data.sender_user_id_}},{{text="• رجوع •",callback_data="/HelpList:"..data.sender_user_id_}}}
@@ -1242,7 +1263,7 @@ local Text = [[
 ✧ : ردود المدير • ردود المطور • التحقق
 ✧ : ضافني • حساب العمر • الزخرفه
 ✧⚍⚍⚍⚍⚍⚍⚍✧
-✧ : [Source Channel](https://t.me/R_V_N1)
+✧ : [Source Channel](https://t.me/athaloss)
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {{{text="اوامر الادمنيه",callback_data="/HelpList2:"..data.sender_user_id_},{text="اوامر الحمايه",callback_data="/HelpList1:"..data.sender_user_id_}},{{text="اوامر المنشئين",callback_data="/HelpList4:"..data.sender_user_id_}},{{text="اوامر الاعضاء",callback_data="/HelpList6:"..data.sender_user_id_},{text="اوامر المطورين",callback_data="/HelpList5:"..data.sender_user_id_}},{{text="• اخفاء الكليشه •",callback_data="/HideHelpList:"..data.sender_user_id_}},{{text="• رجوع •",callback_data="/HelpList:"..data.sender_user_id_}}}
@@ -1295,7 +1316,7 @@ local Text = [[
 ✧ : المنشئين الاساسيين 
 ✧ : حذف جميع الرتب
 ✧⚍⚍⚍⚍⚍⚍⚍✧
-✧ : [Source Channel](https://t.me/R_V_N1)
+✧ : [Source Channel](https://t.me/athaloss)
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {{{text="اوامر الادمنيه",callback_data="/HelpList2:"..data.sender_user_id_},{text="اوامر الحمايه",callback_data="/HelpList1:"..data.sender_user_id_}},{{text="اوامر المدراء",callback_data="/HelpList3:"..data.sender_user_id_}},{{text="اوامر الاعضاء",callback_data="/HelpList6:"..data.sender_user_id_},{text="اوامر المطورين",callback_data="/HelpList5:"..data.sender_user_id_}},{{text="• اخفاء الكليشه •",callback_data="/HideHelpList:"..data.sender_user_id_}},{{text="• رجوع •",callback_data="/HelpList:"..data.sender_user_id_}}}
@@ -1373,7 +1394,7 @@ local Text = [[
 ✧ : ترحيب البوت • المغادره
 ✧ : البوت الخدمي • التواصل
 ✧⚍⚍⚍⚍⚍⚍⚍✧
-✧ : [Source Channel](https://t.me/R_V_N1)
+✧ : [Source Channel](https://t.me/athaloss)
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {{{text="اوامر الادمنيه",callback_data="/HelpList2:"..data.sender_user_id_},{text="اوامر الحمايه",callback_data="/HelpList1:"..data.sender_user_id_}},{{text="اوامر المنشئين",callback_data="/HelpList4:"..data.sender_user_id_},{text="اوامر المدراء",callback_data="/HelpList3:"..data.sender_user_id_}},{{text="اوامر الاعضاء",callback_data="/HelpList6:"..data.sender_user_id_}},{{text="• اخفاء الكليشه •",callback_data="/HideHelpList:"..data.sender_user_id_}},{{text="• رجوع •",callback_data="/HelpList:"..data.sender_user_id_}}}
@@ -1413,7 +1434,7 @@ local Text = [[
 ✧ : تحويل + بالرد ↫ صوره • ملصق • صوت • بصمه
 ✧ : انطق + الكلام تدعم جميع اللغات مع الترجمه للعربي
 ✧⚍⚍⚍⚍⚍⚍⚍✧
-✧ : [Source Channel](https://t.me/R_V_N1)
+✧ : [Source Channel](https://t.me/athaloss)
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {{{text="اوامر الادمنيه",callback_data="/HelpList2:"..data.sender_user_id_},{text="اوامر الحمايه",callback_data="/HelpList1:"..data.sender_user_id_}},{{text="اوامر المنشئين",callback_data="/HelpList4:"..data.sender_user_id_},{text="اوامر المدراء",callback_data="/HelpList3:"..data.sender_user_id_}},{{text="اوامر المطورين",callback_data="/HelpList5:"..data.sender_user_id_}},{{text="• اخفاء الكليشه •",callback_data="/HideHelpList:"..data.sender_user_id_}},{{text="• رجوع •",callback_data="/HelpList:"..data.sender_user_id_}}}
@@ -1620,19 +1641,19 @@ function by_reply(extra, result, success)
 tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},function(arg,data) 
 local mrSOFI = DevSOFI:get(athalos.."Comd:New:rt:SOFI:"..DEV_SOFI..msg.chat_id_)
 if mrSOFI == "مميز" and VipMem(msg) then
-Dev_SOFI(msg.chat_id_, msg.id_, 1, '✧ : العضو ↫ ❨ ['..data.first_name_..'](t.me/'..(data.username_ or 'R_V_N1')..')'..' ❩\n✧ : تم رفعه ❨ '..DEV_SOFI..' ❩ بنجاح', 1, 'md')
+Dev_SOFI(msg.chat_id_, msg.id_, 1, '✧ : العضو ↫ ❨ ['..data.first_name_..'](t.me/'..(data.username_ or 'athaloss')..')'..' ❩\n✧ : تم رفعه ❨ '..DEV_SOFI..' ❩ بنجاح', 1, 'md')
 DevSOFI:set(athalos.."Comd:New:rt:User:"..msg.chat_id_..result.sender_user_id_,DEV_SOFI) 
 DevSOFI:sadd(athalos..'SOFI:VipMem:'..msg.chat_id_, result.sender_user_id_)
 elseif mrSOFI == "ادمن" and Admin(msg) then 
-Dev_SOFI(msg.chat_id_, msg.id_, 1, '✧ : العضو ↫ ❨ ['..data.first_name_..'](t.me/'..(data.username_ or 'R_V_N1')..')'..' ❩\n✧ : تم رفعه ❨ '..DEV_SOFI..' ❩ بنجاح', 1, 'md')
+Dev_SOFI(msg.chat_id_, msg.id_, 1, '✧ : العضو ↫ ❨ ['..data.first_name_..'](t.me/'..(data.username_ or 'athaloss')..')'..' ❩\n✧ : تم رفعه ❨ '..DEV_SOFI..' ❩ بنجاح', 1, 'md')
 DevSOFI:set(athalos.."Comd:New:rt:User:"..msg.chat_id_..result.sender_user_id_,DEV_SOFI)
 DevSOFI:sadd(athalos..'SOFI:Admins:'..msg.chat_id_, result.sender_user_id_)
 elseif mrSOFI == "مدير" and Manager(msg) then
-Dev_SOFI(msg.chat_id_, msg.id_, 1, '✧ : العضو ↫ ❨ ['..data.first_name_..'](t.me/'..(data.username_ or 'R_V_N1')..')'..' ❩\n✧ : تم رفعه ❨ '..DEV_SOFI..' ❩ بنجاح', 1, 'md')
+Dev_SOFI(msg.chat_id_, msg.id_, 1, '✧ : العضو ↫ ❨ ['..data.first_name_..'](t.me/'..(data.username_ or 'athaloss')..')'..' ❩\n✧ : تم رفعه ❨ '..DEV_SOFI..' ❩ بنجاح', 1, 'md')
 DevSOFI:set(athalos.."Comd:New:rt:User:"..msg.chat_id_..result.sender_user_id_,DEV_SOFI)  
 DevSOFI:sadd(athalos..'SOFI:Managers:'..msg.chat_id_, result.sender_user_id_)
 elseif mrSOFI == "عضو" then
-Dev_SOFI(msg.chat_id_, msg.id_, 1, '✧ : العضو ↫ ❨ ['..data.first_name_..'](t.me/'..(data.username_ or 'R_V_N1')..')'..' ❩\n✧ : تم رفعه ❨ '..DEV_SOFI..' ❩ بنجاح', 1, 'md')
+Dev_SOFI(msg.chat_id_, msg.id_, 1, '✧ : العضو ↫ ❨ ['..data.first_name_..'](t.me/'..(data.username_ or 'athaloss')..')'..' ❩\n✧ : تم رفعه ❨ '..DEV_SOFI..' ❩ بنجاح', 1, 'md')
 end
 end,nil)   
 end   
@@ -1646,19 +1667,19 @@ function by_reply(extra, result, success)
 tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},function(arg,data) 
 local mrSOFI = DevSOFI:get(athalos.."Comd:New:rt:SOFI:"..DEV_SOFI..msg.chat_id_)
 if mrSOFI == "مميز" and VipMem(msg) then
-Dev_SOFI(msg.chat_id_, msg.id_, 1, '✧ : العضو ↫ ❨ ['..data.first_name_..'](t.me/'..(data.username_ or 'R_V_N1')..')'..' ❩\n✧ : تم تنزيله ❨ '..DEV_SOFI..' ❩ بنجاح', 1, 'md')
+Dev_SOFI(msg.chat_id_, msg.id_, 1, '✧ : العضو ↫ ❨ ['..data.first_name_..'](t.me/'..(data.username_ or 'athaloss')..')'..' ❩\n✧ : تم تنزيله ❨ '..DEV_SOFI..' ❩ بنجاح', 1, 'md')
 DevSOFI:srem(athalos..'SOFI:VipMem:'..msg.chat_id_, result.sender_user_id_)
 DevSOFI:del(athalos.."Comd:New:rt:User:"..msg.chat_id_..result.sender_user_id_)
 elseif mrSOFI == "ادمن" and Admin(msg) then 
-Dev_SOFI(msg.chat_id_, msg.id_, 1, '✧ : العضو ↫ ❨ ['..data.first_name_..'](t.me/'..(data.username_ or 'R_V_N1')..')'..' ❩\n✧ : تم تنزيله ❨ '..DEV_SOFI..' ❩ بنجاح', 1, 'md')
+Dev_SOFI(msg.chat_id_, msg.id_, 1, '✧ : العضو ↫ ❨ ['..data.first_name_..'](t.me/'..(data.username_ or 'athaloss')..')'..' ❩\n✧ : تم تنزيله ❨ '..DEV_SOFI..' ❩ بنجاح', 1, 'md')
 DevSOFI:srem(athalos..'SOFI:Admins:'..msg.chat_id_, result.sender_user_id_)
 DevSOFI:del(athalos.."Comd:New:rt:User:"..msg.chat_id_..result.sender_user_id_)
 elseif mrSOFI == "مدير" and Manager(msg) then
-Dev_SOFI(msg.chat_id_, msg.id_, 1, '✧ : العضو ↫ ❨ ['..data.first_name_..'](t.me/'..(data.username_ or 'R_V_N1')..')'..' ❩\n✧ : تم تنزيله ❨ '..DEV_SOFI..' ❩ بنجاح', 1, 'md')
+Dev_SOFI(msg.chat_id_, msg.id_, 1, '✧ : العضو ↫ ❨ ['..data.first_name_..'](t.me/'..(data.username_ or 'athaloss')..')'..' ❩\n✧ : تم تنزيله ❨ '..DEV_SOFI..' ❩ بنجاح', 1, 'md')
 DevSOFI:srem(athalos..'SOFI:Managers:'..msg.chat_id_, result.sender_user_id_)
 DevSOFI:del(athalos.."Comd:New:rt:User:"..msg.chat_id_..result.sender_user_id_)
 elseif mrSOFI == "عضو" then
-Dev_SOFI(msg.chat_id_, msg.id_, 1, '✧ : العضو ↫ ❨ ['..data.first_name_..'](t.me/'..(data.username_ or 'R_V_N1')..')'..' ❩\n✧ : تم تنزيله ❨ '..DEV_SOFI..' ❩ بنجاح', 1, 'md')
+Dev_SOFI(msg.chat_id_, msg.id_, 1, '✧ : العضو ↫ ❨ ['..data.first_name_..'](t.me/'..(data.username_ or 'athaloss')..')'..' ❩\n✧ : تم تنزيله ❨ '..DEV_SOFI..' ❩ بنجاح', 1, 'md')
 end
 end,nil)   
 end   
@@ -1672,19 +1693,19 @@ function py_username(extra, result, success)
 if result.id_ then
 local mrSOFI = DevSOFI:get(athalos.."Comd:New:rt:SOFI:"..text1[2]..msg.chat_id_)
 if mrSOFI == "مميز" and VipMem(msg) then
-Dev_SOFI(msg.chat_id_, msg.id_, 1, '✧ : العضو ↫ ❨ ['..result.title_..'](t.me/'..(text1[3] or 'R_V_N1')..')'..' ❩\n✧ : تم رفعه ❨ '..text1[2]..' ❩ بنجاح', 1, 'md')
+Dev_SOFI(msg.chat_id_, msg.id_, 1, '✧ : العضو ↫ ❨ ['..result.title_..'](t.me/'..(text1[3] or 'athaloss')..')'..' ❩\n✧ : تم رفعه ❨ '..text1[2]..' ❩ بنجاح', 1, 'md')
 DevSOFI:sadd(athalos..'SOFI:VipMem:'..msg.chat_id_, result.id_)
 DevSOFI:set(athalos.."Comd:New:rt:User:"..msg.chat_id_..result.id_,text1[2])
 elseif mrSOFI == "ادمن" and Admin(msg) then 
-Dev_SOFI(msg.chat_id_, msg.id_, 1, '✧ : العضو ↫ ❨ ['..result.title_..'](t.me/'..(text1[3] or 'R_V_N1')..')'..' ❩\n✧ : تم رفعه ❨ '..text1[2]..' ❩ بنجاح', 1, 'md')
+Dev_SOFI(msg.chat_id_, msg.id_, 1, '✧ : العضو ↫ ❨ ['..result.title_..'](t.me/'..(text1[3] or 'athaloss')..')'..' ❩\n✧ : تم رفعه ❨ '..text1[2]..' ❩ بنجاح', 1, 'md')
 DevSOFI:sadd(athalos..'SOFI:Admins:'..msg.chat_id_, result.id_)
 DevSOFI:set(athalos.."Comd:New:rt:User:"..msg.chat_id_..result.id_,text1[2])
 elseif mrSOFI == "مدير" and Manager(msg) then
-Dev_SOFI(msg.chat_id_, msg.id_, 1, '✧ : العضو ↫ ❨ ['..result.title_..'](t.me/'..(text1[3] or 'R_V_N1')..')'..' ❩\n✧ : تم رفعه ❨ '..text1[2]..' ❩ بنجاح', 1, 'md')
+Dev_SOFI(msg.chat_id_, msg.id_, 1, '✧ : العضو ↫ ❨ ['..result.title_..'](t.me/'..(text1[3] or 'athaloss')..')'..' ❩\n✧ : تم رفعه ❨ '..text1[2]..' ❩ بنجاح', 1, 'md')
 DevSOFI:sadd(athalos..'SOFI:Managers:'..msg.chat_id_, result.id_)
 DevSOFI:set(athalos.."Comd:New:rt:User:"..msg.chat_id_..result.id_,text1[2])
 elseif mrSOFI == "عضو" then
-Dev_SOFI(msg.chat_id_, msg.id_, 1, '✧ : العضو ↫ ❨ ['..result.title_..'](t.me/'..(text1[3] or 'R_V_N1')..')'..' ❩\n✧ : تم رفعه ❨ '..text1[2]..' ❩ بنجاح', 1, 'md')
+Dev_SOFI(msg.chat_id_, msg.id_, 1, '✧ : العضو ↫ ❨ ['..result.title_..'](t.me/'..(text1[3] or 'athaloss')..')'..' ❩\n✧ : تم رفعه ❨ '..text1[2]..' ❩ بنجاح', 1, 'md')
 end
 else
 Dev_SOFI(msg.chat_id_, msg.id_, 1, "✧ : *المعرف غير صحيح*", 1, 'md')
@@ -1700,19 +1721,19 @@ function py_username(extra, result, success)
 if result.id_ then
 local mrSOFI = DevSOFI:get(athalos.."Comd:New:rt:SOFI:"..text1[2]..msg.chat_id_)
 if mrSOFI == "مميز" and VipMem(msg) then
-Dev_SOFI(msg.chat_id_, msg.id_, 1, '✧ : العضو ↫ ❨ ['..result.title_..'](t.me/'..(text1[3] or 'R_V_N1')..')'..' ❩\n✧ : تم تنزيله ❨ '..text1[2]..' ❩ بنجاح', 1, 'md')
+Dev_SOFI(msg.chat_id_, msg.id_, 1, '✧ : العضو ↫ ❨ ['..result.title_..'](t.me/'..(text1[3] or 'athaloss')..')'..' ❩\n✧ : تم تنزيله ❨ '..text1[2]..' ❩ بنجاح', 1, 'md')
 DevSOFI:srem(athalos..'SOFI:VipMem:'..msg.chat_id_, result.id_)
 DevSOFI:del(athalos.."Comd:New:rt:User:"..msg.chat_id_..result.id_)
 elseif mrSOFI == "ادمن" and Admin(msg) then 
-Dev_SOFI(msg.chat_id_, msg.id_, 1, '✧ : العضو ↫ ❨ ['..result.title_..'](t.me/'..(text1[3] or 'R_V_N1')..')'..' ❩\n✧ : تم تنزيله ❨ '..text1[2]..' ❩ بنجاح', 1, 'md')
+Dev_SOFI(msg.chat_id_, msg.id_, 1, '✧ : العضو ↫ ❨ ['..result.title_..'](t.me/'..(text1[3] or 'athaloss')..')'..' ❩\n✧ : تم تنزيله ❨ '..text1[2]..' ❩ بنجاح', 1, 'md')
 DevSOFI:srem(athalos..'SOFI:Admins:'..msg.chat_id_, result.id_)
 DevSOFI:del(athalos.."Comd:New:rt:User:"..msg.chat_id_..result.id_)
 elseif mrSOFI == "مدير" and Manager(msg) then
-Dev_SOFI(msg.chat_id_, msg.id_, 1, '✧ : العضو ↫ ❨ ['..result.title_..'](t.me/'..(text1[3] or 'R_V_N1')..')'..' ❩\n✧ : تم تنزيله ❨ '..text1[2]..' ❩ بنجاح', 1, 'md')
+Dev_SOFI(msg.chat_id_, msg.id_, 1, '✧ : العضو ↫ ❨ ['..result.title_..'](t.me/'..(text1[3] or 'athaloss')..')'..' ❩\n✧ : تم تنزيله ❨ '..text1[2]..' ❩ بنجاح', 1, 'md')
 DevSOFI:srem(athalos..'SOFI:Managers:'..msg.chat_id_, result.id_)
 DevSOFI:del(athalos.."Comd:New:rt:User:"..msg.chat_id_..result.id_)
 elseif mrSOFI == "عضو" then
-Dev_SOFI(msg.chat_id_, msg.id_, 1, '✧ : العضو ↫ ❨ ['..result.title_..'](t.me/'..(text1[3] or 'R_V_N1')..')'..' ❩\n✧ : تم تنزيله ❨ '..text1[2]..' ❩ بنجاح', 1, 'md')
+Dev_SOFI(msg.chat_id_, msg.id_, 1, '✧ : العضو ↫ ❨ ['..result.title_..'](t.me/'..(text1[3] or 'athaloss')..')'..' ❩\n✧ : تم تنزيله ❨ '..text1[2]..' ❩ بنجاح', 1, 'md')
 end
 else
 Dev_SOFI(msg.chat_id_, msg.id_, 1, "✧ : *المعرف غير صحيح*", 1, 'md')
@@ -1774,7 +1795,7 @@ local Sudo_Welcome = '✧ : اهلا بك مجددا عزيزي المطور \n�
 local key = {
 {'↫ تحديث السورس ✧','↫ تحديث ✧'},
 {'↫ السيرفر ✧'},
-{'↫ مبرمج السورس ✧','↫ قناة السورس ✧'},
+{'↫ مبرمج السورس ✧','↫ قناة السورس ✧','↫ مطور السورس ✧'},
 {'↫  السورس ✧'},
 {'↫ رجوع ✧'},
 }
@@ -1941,8 +1962,8 @@ if text == '/start' and ChCheck(msg) then
 if not DevSOFI:get(athalos..'SOFI:Start:Time'..msg.sender_user_id_) then
 tdcli_function({ID="GetUser",user_id_=DraGoN},function(arg,dp) 
 local inline = {
-{{text="✧ المطور .",url="t.me/"..(dp.username_ or "R_V_N1")}},
-{{text="✧ السورس .",url="https://t.me/R_V_N1"},{text="✧ لتنصيب بوت .",url="https://t.me/GD_300"}},{{text="✧ اضفني في مجموعتك .",url="t.me/"..dp.username_.."?startgroup=botstart"}}
+{{text="✧ المطور .",url="t.me/"..(dp.username_ or "athaloss")}},
+{{text="✧ السورس .",url="https://t.me/athaloss"},{text="✧ لتنصيب بوت .",url="https://t.me/GD_300"}},{{text="✧ اضفني في مجموعتك .",url="t.me/"..dp.username_.."?startgroup=botstart"}}
 }
 local start = DevSOFI:get(athalos.."SOFI:Start:Bot")
 if start then 
@@ -1959,7 +1980,7 @@ end
 --     Source athalos     --
 if not SecondSudo(msg) and not DevSOFI:sismember(athalos..'SOFI:Ban:Pv',msg.sender_user_id_) and not DevSOFI:get(athalos..'SOFI:Texting:Pv') then
 tdcli_function({ID="GetUser",user_id_=DraGoN},function(arg,chat) 
-Dev_SOFI(msg.sender_user_id_, msg.id_, 1, '✧ : تم ارسال رسالتك الى [المطور](t.me/'..(chat.username_ or "R_V_N1")..')', 1, 'md') 
+Dev_SOFI(msg.sender_user_id_, msg.id_, 1, '✧ : تم ارسال رسالتك الى [المطور](t.me/'..(chat.username_ or "athaloss")..')', 1, 'md') 
 tdcli_function({ID="ForwardMessages",chat_id_=DraGoN,from_chat_id_= msg.sender_user_id_,message_ids_={[0]=msg.id_},disable_notification_=1,from_background_=1},function(arg,data) 
 tdcli_function({ID="GetUser",user_id_=msg.sender_user_id_},function(arg,dp) 
 if data and data.messages_ and data.messages_[0] ~= false and data.ID ~= "Error" then
@@ -2089,7 +2110,7 @@ tdcli_function({ID="GetUser",user_id_=DraGoN},function(arg,result)
 local msg_id = msg.id_/2097152/0.5
 Text = "*✧ : Dev Name ↬ * ["..result.first_name_.."](T.me/"..result.username_..")\n*✧ : Dev User ↬* [@"..result.username_.."]"
 keyboard = {} 
-keyboard.inline_keyboard = {{{text = ''..result.first_name_..' ',url="t.me/"..result.username_ or R_V_N1}}}
+keyboard.inline_keyboard = {{{text = ''..result.first_name_..' ',url="t.me/"..result.username_ or athaloss}}}
 https.request("https://api.telegram.org/bot"..TokenBot..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/'..result.username_..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end,nil)
 end
@@ -2151,7 +2172,7 @@ keyboard.inline_keyboard = {
 {{text="🔵 لعبة الالوان 🔴",url='https://t.me/T4TTTTBOT?game=color'}},
 {{text="🚀 لعبة الصاروخ 🚀",url='https://t.me/T4TTTTBOT?game=rocket'},{text="🏹 لعبة السهام 🏹",url='https://t.me/T4TTTTBOT?game=arrow'}},
 {{text="لعبة النينجا",url='https://t.me/gamee?game=GravityNinja21'},{text="لعبة الكرتي",url='https://t.me/gamee?game=KarateKid2'}},
-{{text = '✧ athalos Team .', url="t.me/R_V_N1"}},
+{{text = '✧ athalos Team .', url="t.me/athaloss"}},
 }
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..TokenBot..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
@@ -2959,7 +2980,7 @@ Welcomes = '• نورت حبي \n• firstname \n• username'
 end
 local Welcomes = Welcomes:gsub('"',"") Welcomes = Welcomes:gsub("'","") Welcomes = Welcomes:gsub(",","") Welcomes = Welcomes:gsub("*","") Welcomes = Welcomes:gsub(";","") Welcomes = Welcomes:gsub("`","") Welcomes = Welcomes:gsub("{","") Welcomes = Welcomes:gsub("}","") 
 local Welcomes = Welcomes:gsub('firstname',('['..result.first_name_..']' or ''))
-local Welcomes = Welcomes:gsub('username',('[@'..result.username_..']' or '[@R_V_N1]'))
+local Welcomes = Welcomes:gsub('username',('[@'..result.username_..']' or '[@athaloss]'))
 Dev_SOFI(msg.chat_id_, msg.id_, 1, Welcomes, 1, 'md')
 end 
 if DevSOFI:get(athalos.."SOFI:Lock:Welcome"..msg.chat_id_) then
@@ -3007,7 +3028,7 @@ Welcomes = '• نورت حبي \n• firstname \n• username'
 end
 local Welcomes = Welcomes:gsub('"',"") Welcomes = Welcomes:gsub("'","") Welcomes = Welcomes:gsub(",","") Welcomes = Welcomes:gsub("*","") Welcomes = Welcomes:gsub(";","") Welcomes = Welcomes:gsub("`","") Welcomes = Welcomes:gsub("{","") Welcomes = Welcomes:gsub("}","") 
 local Welcomes = Welcomes:gsub('firstname',('['..msg.content_.members_[0].first_name_..']' or ''))
-local Welcomes = Welcomes:gsub('username',('[@'..msg.content_.members_[0].username_..']' or '[@R_V_N1]'))
+local Welcomes = Welcomes:gsub('username',('[@'..msg.content_.members_[0].username_..']' or '[@athaloss]'))
 Dev_SOFI(msg.chat_id_, msg.id_, 1, Welcomes, 1, 'md')
 end
 --     Source athalos     --
@@ -3609,7 +3630,7 @@ local Text = '✧ : 𝖫𝗂𝗇𝗄 𝖦𝗋𝗈𝗎𝗉 ↬ ⤈\n✧⚍⚍⚍�
 keyboard = {}  
 keyboard.inline_keyboard = {{{text = ta.title_, url=linkgpp.result}}}
 local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..TokenBot..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/R_V_N1&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+https.request("https://api.telegram.org/bot"..TokenBot..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/athaloss&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 else 
 end 
 end,nil) 
@@ -4335,7 +4356,7 @@ Dev_SOFI(msg.chat_id_, msg.id_, 1,[[
 ✧⚍⚍⚍⚍⚍⚍⚍✧
 ✧ : نقاطي • بيع نقاطي
 ✧⚍⚍⚍⚍⚍⚍⚍✧
-✧ : [Source Channel](https://t.me/R_V_N1)
+✧ : [Source Channel](https://t.me/athaloss)
 ]], 1, 'md')
 else
 Dev_SOFI(msg.chat_id_, msg.id_, 1, '✧ : عذرا الالعاب معطله في المجموعه', 1, 'md')
@@ -4503,15 +4524,15 @@ end
 if text == "سورس" and ChCheck(msg) or text == "السورس" and ChCheck(msg) or text == "يا سورس" and ChCheck(msg) or text == "↫  السورس ✧" and ChCheck(msg) then
 Text = [[
 Welcome To Source
-✧ : [athalos Team](https://t.me/R_V_N1)
+✧ : [athalos Team](https://t.me/athaloss)
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '✧ Source Channel',url="https://t.me/R_V_N1"}},
+{{text = '✧ Source Channel',url="https://t.me/athaloss"}},
 {{text = '✧ Developer',url="t.me/GD_300"}}
 }
 local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..TokenBot..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/R_V_N1&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+https.request("https://api.telegram.org/bot"..TokenBot..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/athaloss&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 return false
 end
 --     Source athalos     --
@@ -6829,7 +6850,7 @@ if dp.first_name_ == false then
 Dev_SOFI(msg.chat_id_, msg.id_, 1, "✧ : حساب المنشئ محذوف", 1, "md")
 return false  
 end
-local UserName = (dp.username_ or "R_V_N1")
+local UserName = (dp.username_ or "athaloss")
 Dev_SOFI(msg.chat_id_, msg.id_, 1, "✧ : مالك المجموعه ↫ ["..dp.first_name_.."](T.me/"..UserName..")", 1, "md")  
 end,nil)   
 end
@@ -7013,7 +7034,7 @@ if dp.first_name_ == false then
 Dev_SOFI(msg.chat_id_, msg.id_, 1, "✧ : حساب المنشئ محذوف", 1, "md")
 return false  
 end
-local UserName = (dp.username_ or "R_V_N1")
+local UserName = (dp.username_ or "athaloss")
 Dev_SOFI(msg.chat_id_, msg.id_, 1, "✧ : تم رفع مالك المجموعه ↫ ["..dp.first_name_.."](T.me/"..UserName..")", 1, "md") 
 DevSOFI:sadd(athalos.."SOFI:SOFIConstructor:"..msg.chat_id_,dp.id_)
 end,nil)   
@@ -9036,7 +9057,7 @@ local TXTE = "✧ : اعدادات المجموعه ↫ ⤈\n✧⚍⚍⚍⚍⚍�
 .."✧ : التكرار ↫ "..flood.."\n"
 .."✧ : عدد التكرار ↫ "..Flood_Num.."\n"
 .."✧ : عدد السبام ↫ "..spam_c.."\n"
-.."✧⚍⚍⚍⚍⚍⚍⚍✧\n✧ : [Source Channel](https://t.me/R_V_N1)\n"
+.."✧⚍⚍⚍⚍⚍⚍⚍✧\n✧ : [Source Channel](https://t.me/athaloss)\n"
 Dev_SOFI(msg.chat_id_, msg.id_, 1, TXTE, 1, 'md')
 end
 end
@@ -9352,7 +9373,7 @@ SOFI = math.random(2,1075);
 local Text ='*✧ : تم اختيار المتحركه لك*'
 keyboard = {}  
 keyboard.inline_keyboard = { 
-{{text = '✧ athalos Team .',url="t.me/R_V_N1"}},
+{{text = '✧ athalos Team .',url="t.me/athaloss"}},
 } 
 local msg_id = msg.id_/2097152/0.5 
 https.request("https://api.telegram.org/bot"..TokenBot..'/sendanimation?chat_id=' .. msg.chat_id_ .. '&animation=https://t.me/GifDavid/'..SOFI..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
@@ -9373,7 +9394,7 @@ SOFI = math.random(2,1201);
 local Text ='*✧ : تم اختيار مقطع الميمز لك*'
 keyboard = {}  
 keyboard.inline_keyboard = { 
-{{text = '✧ athalos Team .',url="t.me/R_V_N1"}},
+{{text = '✧ athalos Team .',url="t.me/athaloss"}},
 } 
 local msg_id = msg.id_/2097152/0.5 
 https.request("https://api.telegram.org/bot"..TokenBot..'/sendVoice?chat_id=' .. msg.chat_id_ .. '&voice=https://t.me/MemzDavid/'..SOFI..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
@@ -9394,7 +9415,7 @@ SOFI = math.random(4,2824);
 local Text ='*✧ : تم اختيار المقطع الصوتي لك*'
 keyboard = {}  
 keyboard.inline_keyboard = { 
-{{text = '✧ athalos Team .',url="t.me/R_V_N1"}},
+{{text = '✧ athalos Team .',url="t.me/athaloss"}},
 } 
 local msg_id = msg.id_/2097152/0.5 
 https.request("https://api.telegram.org/bot"..TokenBot..'/sendVoice?chat_id=' .. msg.chat_id_ .. '&voice=https://t.me/AudiosDavid/'..SOFI..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
@@ -9415,7 +9436,7 @@ SOFI = math.random(2,1167);
 local Text ='*✧ : تم اختيار الاغنيه لك*'
 keyboard = {}  
 keyboard.inline_keyboard = { 
-{{text = '✧ athalos Team .',url="t.me/R_V_N1"}},
+{{text = '✧ athalos Team .',url="t.me/athaloss"}},
 } 
 local msg_id = msg.id_/2097152/0.5 
 https.request("https://api.telegram.org/bot"..TokenBot..'/sendVoice?chat_id=' .. msg.chat_id_ .. '&voice=https://t.me/athalosMp3/'..SOFI..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
@@ -9436,7 +9457,7 @@ SOFI = math.random(2,612);
 local Text ='*✧ : تم اختيار الريمكس لك*'
 keyboard = {}  
 keyboard.inline_keyboard = { 
-{{text = '✧ athalos Team .',url="t.me/R_V_N1"}},
+{{text = '✧ athalos Team .',url="t.me/athaloss"}},
 } 
 local msg_id = msg.id_/2097152/0.5 
 https.request("https://api.telegram.org/bot"..TokenBot..'/sendVoice?chat_id=' .. msg.chat_id_ .. '&voice=https://t.me/RemixDavid/'..SOFI..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
@@ -9457,7 +9478,7 @@ SOFI = math.random(4,1171);
 local Text ='*✧ : تم اختيار الصوره لك*'
 keyboard = {}  
 keyboard.inline_keyboard = { 
-{{text = '✧ athalos Team .',url="t.me/R_V_N1"}},
+{{text = '✧ athalos Team .',url="t.me/athaloss"}},
 } 
 local msg_id = msg.id_/2097152/0.5 
 https.request("https://api.telegram.org/bot"..TokenBot..'/sendphoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/PhotosDavid/'..SOFI..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
@@ -9478,7 +9499,7 @@ SOFI = math.random(3,1002);
 local Text ='*✧ : تم اختيار صورة الانمي لك*'
 keyboard = {}  
 keyboard.inline_keyboard = { 
-{{text = '✧ athalos Team .',url="t.me/R_V_N1"}},
+{{text = '✧ athalos Team .',url="t.me/athaloss"}},
 } 
 local msg_id = msg.id_/2097152/0.5 
 https.request("https://api.telegram.org/bot"..TokenBot..'/sendphoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/AnimeDavid/'..SOFI..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
@@ -9499,7 +9520,7 @@ SOFI = math.random(45,125);
 local Text ='*✧ : تم اختيار الفلم لك*'
 keyboard = {}  
 keyboard.inline_keyboard = { 
-{{text = '✧ athalos Team .',url="t.me/R_V_N1"}},
+{{text = '✧ athalos Team .',url="t.me/athaloss"}},
 } 
 local msg_id = msg.id_/2097152/0.5 
 https.request("https://api.telegram.org/bot"..TokenBot..'/sendphoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/MoviesDavid/'..SOFI..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
@@ -9520,7 +9541,7 @@ SOFI = math.random(2,54);
 local Text ='*✧ : تم اختيار المسلسل لك*'
 keyboard = {}  
 keyboard.inline_keyboard = { 
-{{text = '✧ athalos Team .',url="t.me/R_V_N1"}},
+{{text = '✧ athalos Team .',url="t.me/athaloss"}},
 } 
 local msg_id = msg.id_/2097152/0.5 
 https.request("https://api.telegram.org/bot"..TokenBot..'/sendphoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/SeriesDavid/'..SOFI..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
@@ -9788,7 +9809,7 @@ local TkeedList = DevSOFI:scard(athalos.."SOFI:SOFI:Tkeed:"..ChatId) or 0
 local AdminsList = DevSOFI:scard(athalos.."SOFI:Admins:"..ChatId) or 0
 local VipList = DevSOFI:scard(athalos.."SOFI:VipMem:"..ChatId) or 0
 local LinkGp = json:decode(https.request('https://api.telegram.org/bot'..TokenBot..'/exportChatInviteLink?chat_id='..ChatId))
-if LinkGp.ok == true then LinkGroup = LinkGp.result else LinkGroup = 't.me/R_V_N1' end
+if LinkGp.ok == true then LinkGroup = LinkGp.result else LinkGroup = 't.me/athaloss' end
 tdcli_function({ID ="GetChat",chat_id_=ChatId},function(arg,dp)
 tdcli_function ({ID = "GetChannelMembers",channel_id_ = ChatId:gsub("-100",""),filter_ = {ID = "ChannelMembersAdministrators"},offset_ = 0,limit_ = 100},function(arg,data) 
 if dp.id_ then
@@ -9798,7 +9819,7 @@ if data.members_[i].status_.ID == "ChatMemberStatusCreator" then
 Manager_id = admins[i].user_id_
 tdcli_function ({ID = "GetUser",user_id_ = Manager_id},function(arg,SOFI) 
 if SOFI.first_name_ ~= false then
-ConstructorSOFI = "["..SOFI.first_name_.."](T.me/"..(SOFI.username_ or "R_V_N1")..")"
+ConstructorSOFI = "["..SOFI.first_name_.."](T.me/"..(SOFI.username_ or "athaloss")..")"
 else 
 ConstructorSOFI = "حساب محذوف"
 end
@@ -10790,7 +10811,7 @@ local Text = [[
 ✧ : م5 ↫ اوامر المطورين
 ✧ : م6 ↫ اوامر الاعضاء
 ✧⚍⚍⚍⚍⚍⚍⚍✧
-✧ : [Source Channel](https://t.me/R_V_N1)
+✧ : [Source Channel](https://t.me/athaloss)
 ]] 
 keyboard = {} 
 keyboard.inline_keyboard = {{{text="اوامر الادمنيه",callback_data="/HelpList2:"..msg.sender_user_id_},{text="اوامر الحمايه",callback_data="/HelpList1:"..msg.sender_user_id_}},{{text="اوامر المنشئين",callback_data="/HelpList4:"..msg.sender_user_id_},{text="اوامر المدراء",callback_data="/HelpList3:"..msg.sender_user_id_}},{{text="اوامر الاعضاء",callback_data="/HelpList6:"..msg.sender_user_id_},{text="اوامر المطورين",callback_data="/HelpList5:"..msg.sender_user_id_}},{{text="• اخفاء الكليشه •",callback_data="/HideHelpList:"..msg.sender_user_id_}}}
@@ -10861,7 +10882,7 @@ local Text = [[
 ✧ : البوتات بالطرد
 ✧ : البوتات بالتقيد
 ✧⚍⚍⚍⚍⚍⚍⚍✧
-✧ : [Source Channel](https://t.me/R_V_N1)
+✧ : [Source Channel](https://t.me/athaloss)
 ]]
 Dev_SOFI(msg.chat_id_, msg.id_, 1, (Help or Text), 1, 'md')
 end end
@@ -10936,7 +10957,7 @@ local Text = [[
 ✧ : تقييد يوم + عدد الايام
 ✧ : الغاء تقييد ↫ لالغاء التقييد بالوقت
 ✧⚍⚍⚍⚍⚍⚍⚍✧
-✧ : [Source Channel](https://t.me/R_V_N1)
+✧ : [Source Channel](https://t.me/athaloss)
 ]]
 Dev_SOFI(msg.chat_id_, msg.id_, 1, (Help or Text), 1, 'md')
 end end
@@ -11001,7 +11022,7 @@ local Text = [[
 ✧ : ردود المدير • ردود المطور • التحقق
 ✧ : ضافني • حساب العمر • الزخرفه
 ✧⚍⚍⚍⚍⚍⚍⚍✧
-✧ : [Source Channel](https://t.me/R_V_N1)
+✧ : [Source Channel](https://t.me/athaloss)
 ]]
 Dev_SOFI(msg.chat_id_, msg.id_, 1, (Help or Text), 1, 'md')
 end end
@@ -11060,7 +11081,7 @@ local Text = [[
 ✧ : المنشئين الاساسيين 
 ✧ : حذف جميع الرتب
 ✧⚍⚍⚍⚍⚍⚍⚍✧
-✧ : [Source Channel](https://t.me/R_V_N1)
+✧ : [Source Channel](https://t.me/athaloss)
 ]]
 Dev_SOFI(msg.chat_id_, msg.id_, 1, (Help or Text), 1, 'md')
 end end
@@ -11144,7 +11165,7 @@ local Text = [[
 ✧ : ترحيب البوت • المغادره
 ✧ : البوت الخدمي • التواصل
 ✧⚍⚍⚍⚍⚍⚍⚍✧
-✧ : [Source Channel](https://t.me/R_V_N1)
+✧ : [Source Channel](https://t.me/athaloss)
 ]]
 Dev_SOFI(msg.chat_id_, msg.id_, 1, (Help or Text), 1, 'md')
 end end
@@ -11190,7 +11211,7 @@ local Text = [[
 ✧ : تحويل + بالرد ↫ صوره • ملصق • صوت • بصمه
 ✧ : انطق + الكلام تدعم جميع اللغات مع الترجمه للعربي
 ✧⚍⚍⚍⚍⚍⚍⚍✧
-✧ : [Source Channel](https://t.me/R_V_N1)
+✧ : [Source Channel](https://t.me/athaloss)
 ]]
 Dev_SOFI(msg.chat_id_, msg.id_, 1, (Help or Text), 1, 'md')
 end
@@ -11379,30 +11400,35 @@ end end end end
 --     Source athalos     --
 if text == 'القناة' and ChCheck(msg) or text == 'قناة السورس' and ChCheck(msg) or text == 'قناه السورس' and ChCheck(msg) or text == 'قنات السورس' and ChCheck(msg) or text == '↫ قناة السورس ✧' and ChCheck(msg) then 
 Text = [[
-✧ : [قناة السورس](https://t.me/R_V_N1)
+✧ : [قناة السورس](https://t.me/athaloss)
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '✧ قناة السورس',url="t.me/R_V_N1"}},
+{{text = '✧ قناة السورس',url="t.me/athaloss"}},
 }
 local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..TokenBot..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/R_V_N1&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+https.request("https://api.telegram.org/bot"..TokenBot..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/athaloss&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 return false
 end
---     Source athalos     --
-if text == "مبرمج السورس" and ChCheck(msg) or text == "مطور السورس" and ChCheck(msg) or text == "وين المبرمج" and ChCheck(msg) or text == "المبرمج" and ChCheck(msg) or text == "↫ مبرمج السورس ✧" and ChCheck(msg) then 
-Text = [[
-✧ : [مبرمج السورس](https://t.me/GD_300)
-]]
+--     Source Dragon     --
+if text == "مطور السورس" and ChCheck(msg) or text == "مطور اثالوس" and ChCheck(msg) or text == "وين المطور السورس" and ChCheck(msg) or text == "مطور سورس" and ChCheck(msg) or text == "↫ مطور السورس ✧" and ChCheck(msg) then 
+Text = "• *The developer of this source is* : [✧ مطور السورس](https://t.me/GD_300)."
 keyboard = {} 
-keyboard.inline_keyboard = {
-{{text = '✧ مبرمج السورس',url="t.me/GD_300"}},
-}
+keyboard.inline_keyboard = {{{text='• ✧ مطور السورس •',url="t.me/GD_300"}}}
 local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..TokenBot..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/GD_300&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+https.request("https://api.telegram.org/bot"..TokenBot..'/sendPhoto?chat_id='..msg.chat_id_..'&photo=https://t.me/GD_300&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 return false
 end
---     Source athalos     --
+--     Source Dragon     --
+if text == "مبرمج السورس" and ChCheck(msg) or text == "مبرمج اثالوس" and ChCheck(msg) or text == "وين المبرمج" and ChCheck(msg) or text == "المبرمج" and ChCheck(msg) or text == "↫ مبرمج السورس ✧" and ChCheck(msg) then 
+Text = "• *The programmer of this source is* : [✧ مبرمج السورس](https://t.me/tiv00)."
+keyboard = {} 
+keyboard.inline_keyboard = {{{text='• ✧ مبرمج السورس •',url="t.me/tiv00"}}}
+local msg_id = msg.id_/2097152/0.5
+https.request("https://api.telegram.org/bot"..TokenBot..'/sendPhoto?chat_id='..msg.chat_id_..'&photo=https://t.me/tiv00&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+return false
+end
+--     Source Dragon     --
 if text == 'معلومات السيرفر' or text == 'السيرفر' or text == '↫ السيرفر ✧' then 
 if not SOFISudo(msg) then
 Dev_SOFI(msg.chat_id_, msg.id_, 1, '✧ : للمطور الاساسي فقط ', 1, 'md')
@@ -11532,8 +11558,8 @@ end
 --     Source athalos     --
 end 
 ------------------------------------------------
--- This Source Was Developed By (SOFI) @S00F4.--
---   This Is The Source Channel @R_V_N1 .     --
+-- This Source Was Developed By (SOFI) @GD_300.--
+--   This Is The Source Channel @athaloss .     --
 --                - athalos -                 --
---        -- https://t.me/R_V_N1 --           --
+--        -- https://t.me/athaloss --           --
 ------------------------------------------------   
