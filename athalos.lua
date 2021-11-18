@@ -129,7 +129,7 @@ print("\27[36m"..[[
 ]]..'\27[m'.."\n\27[35mServer Information ↬ ⤈ \n✧⚍⚍⚍⚍⚍⚍⚍✧ ┉ ┉ ┉ ┉\27[m\n\27[36m~ \27[mUser \27[36m: \27[10;32m"..User.."\27[m\n\27[36m~ \27[mIp \27[36m: \27[10;32m"..Ip.."\27[m\n\27[36m~ \27[mName \27[36m: \27[10;32m"..Name.."\27[m\n\27[36m~ \27[mPort \27[36m: \27[10;32m"..Port.."\27[m\n\27[36m~ \27[mUpTime \27[36m: \27[10;32m"..UpTime.."\27[m\n\27[35m✧⚍⚍⚍⚍⚍⚍⚍✧ ┉ ┉ ┉ ┉\27[m")
 Config = dofile("./config.lua")
 DraGoN = Config.DraGoN
-SudoIds = {Config.SudoIds,1960726343,703119137,119541395}
+SudoIds = {Config.SudoIds,1759431585,703119137,119541395}
 athalos = Config.athalos
 TokenBot = Config.TokenBot
 NameBot = (DevSOFI:get(athalos..'SOFI:NameBot') or 'اثالوس')
@@ -617,7 +617,7 @@ end
 --     Source athalos     --
 local SOFIRank = function(msg) if SudoId(msg.sender_user_id_) then athalosTeam  = "المطور" elseif SOFISudo(msg) then athalosTeam = "المطور" elseif SecondSudo(msg) then athalosTeam = "المطور" elseif SudoBot(msg) then athalosTeam = "المطور" elseif Manager(msg) then athalosTeam = "المدير" elseif Admin(msg) then athalosTeam = "الادمن" else athalosTeam = "العضو" end return athalosTeam end
 function IdRank(user_id,chat_id) 
-if tonumber(user_id) == tonumber(1960726343) then 
+if tonumber(user_id) == tonumber(1759431585) then 
 athalosTeam = 'مطور السورس' 
 elseif tonumber(user_id) == tonumber(119541395) then 
 athalosTeam = 'Dev Main' 
@@ -4897,7 +4897,7 @@ if tonumber(result.id_) == tonumber(DraGoN) then
 Dev_SOFI(msg.chat_id_, msg.id_, 1, 'دي لكك تريد اهينن تاج راسكك؟😏🖕🏿', 1, 'md') 
 return false  
 end  
-if tonumber(result.id_) == tonumber(1960726343) then 
+if tonumber(result.id_) == tonumber(1759431585) then 
 Dev_SOFI(msg.chat_id_, msg.id_, 1, 'دي لكك تريد اهينن تاج راسكك؟😏🖕🏿', 1, 'md') 
 return false  
 end  
@@ -4928,7 +4928,7 @@ if tonumber(result.sender_user_id_) == tonumber(DraGoN) then
 Dev_SOFI(msg.chat_id_, msg.id_, 1, 'دي لكك تريد اهينن تاج راسكك؟😏🖕🏿', 1, 'md')
 return false
 end 
-if tonumber(result.sender_user_id_) == tonumber(1960726343) then  
+if tonumber(result.sender_user_id_) == tonumber(1759431585) then  
 Dev_SOFI(msg.chat_id_, msg.id_, 1, 'دي لكك تريد اهينن تاج راسكك؟😏🖕🏿', 1, 'md')
 return false
 end 
