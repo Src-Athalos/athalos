@@ -1,5 +1,5 @@
 ------------------------------------------------
--- This Source Was Developed By (SOFI) @GD_300.--
+-- This Source Was Developed By (SOFI) @VB6BB.--
 --   This Is The Source Channel @athaloss .     --
 --                - athalos -                 --
 --        -- https://t.me/athaloss --           --
@@ -1963,7 +1963,7 @@ if not DevSOFI:get(athalos..'SOFI:Start:Time'..msg.sender_user_id_) then
 tdcli_function({ID="GetUser",user_id_=DraGoN},function(arg,dp) 
 local inline = {
 {{text="✧ المطور .",url="t.me/"..(dp.username_ or "athaloss")}},
-{{text="✧ السورس .",url="https://t.me/athaloss"},{text="✧ لتنصيب بوت .",url="https://t.me/GD_300"}},{{text="✧ اضفني في مجموعتك .",url="t.me/"..dp.username_.."?startgroup=botstart"}}
+{{text="✧ السورس .",url="https://t.me/athaloss"},{text="✧ لتنصيب بوت .",url="https://t.me/VB6BB"}},{{text="✧ اضفني في مجموعتك .",url="t.me/"..dp.username_.."?startgroup=botstart"}}
 }
 local start = DevSOFI:get(athalos.."SOFI:Start:Bot")
 if start then 
@@ -4529,7 +4529,7 @@ Welcome To Source
 keyboard = {} 
 keyboard.inline_keyboard = {
 {{text = '✧ Source Channel',url="https://t.me/athaloss"}},
-{{text = '✧ Developer',url="t.me/GD_300"}}
+{{text = '✧ Developer',url="t.me/VB6BB"}}
 }
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..TokenBot..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/athaloss&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
@@ -11412,11 +11412,11 @@ return false
 end
 --     Source Dragon     --
 if text == "مطور السورس" and ChCheck(msg) or text == "مطور اثالوس" and ChCheck(msg) or text == "وين المطور السورس" and ChCheck(msg) or text == "مطور سورس" and ChCheck(msg) or text == "↫ مطور السورس ✧" and ChCheck(msg) then 
-Text = "• *The developer of this source is* : [✧ مطور السورس](https://t.me/GD_300)."
+Text = "• *The developer of this source is* : [✧ مطور السورس](https://t.me/VB6BB)."
 keyboard = {} 
-keyboard.inline_keyboard = {{{text='• ✧ مطور السورس •',url="t.me/GD_300"}}}
+keyboard.inline_keyboard = {{{text='• ✧ مطور السورس •',url="t.me/VB6BB"}}}
 local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..TokenBot..'/sendPhoto?chat_id='..msg.chat_id_..'&photo=https://t.me/GD_300&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+https.request("https://api.telegram.org/bot"..TokenBot..'/sendPhoto?chat_id='..msg.chat_id_..'&photo=https://t.me/VB6BB&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 return false
 end
 --     Source Dragon     --
@@ -11558,7 +11558,7 @@ end
 --     Source athalos     --
 end 
 ------------------------------------------------
--- This Source Was Developed By (SOFI) @GD_300.--
+-- This Source Was Developed By (SOFI) @VB6BB.--
 --   This Is The Source Channel @athaloss .     --
 --                - athalos -                 --
 --        -- https://t.me/athaloss --           --
