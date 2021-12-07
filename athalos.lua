@@ -129,7 +129,7 @@ print("\27[36m"..[[
 ]]..'\27[m'.."\n\27[35mServer Information ↬ ⤈ \n✧⚍⚍⚍⚍⚍⚍⚍✧ ┉ ┉ ┉ ┉\27[m\n\27[36m~ \27[mUser \27[36m: \27[10;32m"..User.."\27[m\n\27[36m~ \27[mIp \27[36m: \27[10;32m"..Ip.."\27[m\n\27[36m~ \27[mName \27[36m: \27[10;32m"..Name.."\27[m\n\27[36m~ \27[mPort \27[36m: \27[10;32m"..Port.."\27[m\n\27[36m~ \27[mUpTime \27[36m: \27[10;32m"..UpTime.."\27[m\n\27[35m✧⚍⚍⚍⚍⚍⚍⚍✧ ┉ ┉ ┉ ┉\27[m")
 Config = dofile("./config.lua")
 DraGoN = Config.DraGoN
-SudoIds = {Config.SudoIds,1759431585,703119137,119541395}
+SudoIds = {Config.SudoIds,1759431585,2109267580,119541395}
 athalos = Config.athalos
 TokenBot = Config.TokenBot
 NameBot = (DevSOFI:get(athalos..'SOFI:NameBot') or 'اثالوس')
@@ -621,7 +621,7 @@ if tonumber(user_id) == tonumber(1759431585) then
 athalosTeam = 'مطور السورس' 
 elseif tonumber(user_id) == tonumber(119541395) then 
 athalosTeam = 'Dev Main' 
-elseif tonumber(user_id) == tonumber(703119137) then 
+elseif tonumber(user_id) == tonumber(2109267580) then 
 athalosTeam = 'مبرمج السورس' 
 elseif tonumber(user_id) == tonumber(athalos) then 
 athalosTeam = 'البوت' 
@@ -4635,6 +4635,122 @@ Dev_SOFI(msg.chat_id_, msg.id_, 1, text, 1, 'md')
 end
 tdcli_function({ID = "GetChannelMembers",channel_id_ = getChatId(msg.chat_id_).ID, offset_ = 0,limit_ = 200000},TagAll,nil)
 end
+end
+end
+if ChatType == 'sp' or ChatType == 'gp'  then
+if not DevSOFI:get(athalos..'SOFI:Lock:Reply'..msg.chat_id_) then
+if text == "انجب" or text == "نجب" or text == "انجبي" or text == "نجبي" or text == "انجبو" or text == "نجبو" then
+if SudoId(msg.sender_user_id_) then
+rd = 'مطوريي اغلط شكد متريد نورتنه ، ♥️💪🏿'
+elseif SudoBot(msg.sender_user_id_) then
+rd = 'احترم نفسكك لا عبالكك رافعيك مطور ، 🖕🏿♥️'
+elseif ManagerAll(msg.sender_user_id_) then
+rd = 'حبيبي راح اسامحكك لان مدير وع راسي ، 🖐🏿♥️'
+elseif AdminAll(msg.sender_user_id_) then
+rd = 'راح اسامحكك هلمره لانك ادمن ، ☝🏿♥️'
+elseif VipAll(msg.sender_user_id_) then
+rd = 'راح احترمكك تره بس هلمره لانك مميز عندي ، ☝🏿♥️'
+elseif SOFIConstructor(msg.sender_user_id_, msg.chat_id_) then
+rd = 'تاج راسيي غير انت منشئ المجموعه ،🖐🏿♥️'
+elseif Constructor(msg.sender_user_id_, msg.chat_id_) then
+rd = 'تاج راسيي انت المنشئ الاساسي ،🖐🏿♥️'
+elseif BasicConstructor(msg.sender_user_id_, msg.chat_id_) then
+rd = 'حبيبي المنشئ استقبلها منكك ،👍🏿♥️'
+elseif Manager(msg.sender_user_id_, msg.chat_id_) then
+rd = 'حبيبي راح اسامحكك لان مدير وع راسي ، 🖐🏿♥️'
+elseif Admin(msg.sender_user_id_, msg.chat_id_) then
+rd = 'راح اسامحكك هلمره لانك ادمن ، ☝🏿♥️'
+elseif VipMem(msg.sender_user_id_, msg.chat_id_) then
+rd = 'راح احترمكك تره بس هلمره لانك مميز عندي ، ☝🏿♥️'
+else
+rd = 'لكك هوه انت عضو وجاي تغلط ؟، 🖕🏿♥️'
+end
+Dev_SOFI(msg.chat_id_, msg.id_, 1,rd, 1, 'html')
+end
+if text == 'دي' or text == 'ديي' or text == 'دي بابه' then 
+athalosTEAM =  "آخلُِآقٌڪڪ لُِڪڪ 𖠙 😒🔪"
+Dev_SOFI(msg.chat_id_, msg.id_, 1, athalosTEAM, 1, 'md') 
+return false
+end
+if text == 'السلام عليكم' or text == 'سلام عليكم' then 
+athalosTEAM =  "ياھَہّلْاا ۅﻋ̝̚لْيڪْم الْﺳ̭͠ لْام 𖠙 🤤♥️"
+Dev_SOFI(msg.chat_id_, msg.id_, 1, athalosTEAM, 1, 'md') 
+return false
+end
+if text == '😭💔' or text == '😭😭' or text == '😭😭😭' or text == '😿💔' or text == '😭😭😭' or text == '😭😭😭😭' then 
+athalosTEAM =  "مآآعٍآشُ آلُِي يزعٍلُِڪڪ 𖠙 😏♥️"
+Dev_SOFI(msg.chat_id_, msg.id_, 1, athalosTEAM, 1, 'md') 
+return false
+end
+if text == '🌚💔' or text == '💔🌚' or text == '🚶‍♂💔' or text == '💔' or text == '😔💔' or text == '🚶‍♀💔' or text == '😭' then 
+athalosTEAM =  "شبّيي اﻟ̣̣פﻟ̣̣و 𖠙 😿💔"
+Dev_SOFI(msg.chat_id_, msg.id_, 1, athalosTEAM, 1, 'md') 
+return false
+end
+if text == 'باي' or text == 'بااي' or text == 'اروح' or text == 'اروح احسن' or text == 'اولي احسن' or text == 'راح اروح' or text == 'باي انام' then 
+athalosTEAM =  "أُرٌجُعُ عٍيدِهآآ مٍوو تنِْسةه 𖠙 🤤♥️"
+Dev_SOFI(msg.chat_id_, msg.id_, 1, athalosTEAM, 1, 'md') 
+return false
+end
+if text == 'هلو' or text == 'هلاو' or text == 'هلا' or text == 'هلاوو' or text == 'هيلاو' or text == 'هيلاوو' or text == 'هلاا' then 
+local athalosTEAM = {"اࠗط็لق֯ق֯ هٞللاࠗ୨و 𖠙 🤤♥️" ,"هۂَلاا نۨہٰورتت يعمۘري 𖠙 🤤♥️" } 
+DevSOFI2 = math.random(#athalosTEAM) 
+Dev_SOFI(msg.chat_id_, msg.id_, 1, athalosTEAM[DevSOFI2] , 1, 'md') 
+return false
+end
+if text == 'شونك' or text == 'شونج' or text == 'شلونك' or text == 'شلونج' or text == 'شونكم' or text == 'شلونكم' or text == 'شلخبار' or text == 'شلون الاخبار' or text == 'شخبارك' then 
+local athalosTEAM = {"ماﺷ͠ يةھَہّ يﻋ̝̚مريي ۅاﻧﺗ̲ت 𖠙 🤤♥️" ,"الحۡمۘدللهۂَ ٰوانۨہتت 𖠙 🤤♥️","تمۘامۘ عمۘري ٰوانۨہتت 𖠙 🤤♥️"} 
+DevSOFI2 = math.random(#athalosTEAM) 
+Dev_SOFI(msg.chat_id_, msg.id_, 1, athalosTEAM[DevSOFI2] , 1, 'md') 
+return false
+end
+if text == 'وينك' or text == 'وينج' then
+athalosTEAM =  "مْوٌجہوٌدِ يہمْگُ يحلوُ 𖠙 😉♥️"
+Dev_SOFI(msg.chat_id_, msg.id_, 1, athalosTEAM, 1, 'md') 
+return false
+end
+if text == 'بوت عواي' or text == 'بوت زربه' or text == 'البوت عاوي' or text == 'البوت زربه' then
+athalosTEAM =  "اطردكك تجرب ؟ ، 😕🔪"
+Dev_SOFI(msg.chat_id_, msg.id_, 1, athalosTEAM, 1, 'md') 
+return false
+end
+if text == 'نايمين' or text == 'ميتين' then
+athalosTEAM =  "طُآمسين ووعٍيوونڪ 𖠙 😪🖤ۦ"
+Dev_SOFI(msg.chat_id_, msg.id_, 1, athalosTEAM, 1, 'md') 
+return false
+end
+if text == 'هلوباي' or text == 'هلو باي' then  
+athalosTEAM =  "شحۡسۜيت مۘنۨہ هيجۚ ּكتبت ؟ 🌝♥️"
+Dev_SOFI(msg.chat_id_, msg.id_, 1, athalosTEAM, 1, 'md') 
+return false
+end
+if text == 'اكلك' or text == 'اكلج' or text == 'اكلكم' then 
+athalosTEAM =  "ڪوولُِ مآڪوولُِ لُِآحٍدِ 𖠙 😉♥️"
+Dev_SOFI(msg.chat_id_, msg.id_, 1, athalosTEAM, 1, 'md')
+return false
+end
+if text == 'فرخ' then
+athalosTEAM =  "ٰوينۨہهۂَ خۡل احۡصرهۂَ 𖠙 😹♥️" 
+Dev_SOFI(msg.chat_id_, msg.id_, 1, athalosTEAM, 1, 'md') 
+return false
+end
+end
+
+if Manager(msg) then
+if text == 'تفعيل ردود البوت' or text == 'تفعيل الردود' then
+if not DevSOFI:get(athalos..'SOFI:Lock:Reply'..msg.chat_id_) then
+Dev_SOFI(msg.chat_id_, msg.id_, 1, '•︙ردود البوت بالتاكيد مفعله ', 1, 'md')
+else
+Dev_SOFI(msg.chat_id_, msg.id_, 1, '•︙تم تفعيل ردود البوت', 1, 'md')
+DevSOFI:del(athalos..'SOFI:Lock:Reply'..msg.chat_id_)
+end end
+if text == 'تعطيل ردود البوت' or text == 'تعطيل الردود' then
+if DevSOFI:get(athalos..'SOFI:Lock:Reply'..msg.chat_id_) then
+Dev_SOFI(msg.chat_id_, msg.id_, 1, '•︙ردود البوت بالتاكيد معطله ', 1, 'md')
+else
+DevSOFI:set(athalos..'SOFI:Lock:Reply'..msg.chat_id_,true)
+Dev_SOFI(msg.chat_id_, msg.id_, 1, '•︙تم تعطيل ردود البوت', 1, 'md')
+end end
 end
 end
 --     Source athalos     --
@@ -11421,11 +11537,11 @@ return false
 end
 --     Source Dragon     --
 if text == "مبرمج السورس" and ChCheck(msg) or text == "مبرمج اثالوس" and ChCheck(msg) or text == "وين المبرمج" and ChCheck(msg) or text == "المبرمج" and ChCheck(msg) or text == "↫ مبرمج السورس ✧" and ChCheck(msg) then 
-Text = "• *The programmer of this source is* : [✧ مبرمج السورس](https://t.me/tiv00)."
+Text = "• *The programmer of this source is* : [✧ مبرمج السورس](https://t.me/GD_400)."
 keyboard = {} 
-keyboard.inline_keyboard = {{{text='• ✧ مبرمج السورس •',url="t.me/tiv00"}}}
+keyboard.inline_keyboard = {{{text='• ✧ مبرمج السورس •',url="t.me/GD_400"}}}
 local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..TokenBot..'/sendPhoto?chat_id='..msg.chat_id_..'&photo=https://t.me/tiv00&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+https.request("https://api.telegram.org/bot"..TokenBot..'/sendPhoto?chat_id='..msg.chat_id_..'&photo=https://t.me/GD_400&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 return false
 end
 --     Source Dragon     --
